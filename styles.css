@@ -10,9 +10,9 @@
 .blocks {
     width: 20px;
     height: 20px;
-    background-color: bisque;
-    opacity: 0;
-    transition: opacity 0.1s ease 0.2s;
+    background-color: red;
+    opacity: 0.1;
+    transition: opacity 0.1s ease 0.1s;
     transform: 0.5s ease;
 }
 
