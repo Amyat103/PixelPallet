@@ -1,5 +1,3 @@
-
-
 // TODO:
 // everytime click remove grid
 // 
@@ -32,7 +30,7 @@ makeGrid(10);
 
 const clickSize = inputButton.addEventListener("click", (e) => {
     gridSize = inputBox.value;
-    if (inputBox.value > 100 || inputBox.value < 10) {
+    if (inputBox.value > 30 || inputBox.value < 5) {
         if (errorDiv.contains(document.querySelector("#errorMessage"))) {
             errorDiv.innerHTML = "";
         }
