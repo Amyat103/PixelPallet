@@ -1,7 +1,7 @@
-html,
 body {
     margin: 0;
-    height: 100%;
+    padding: 0;
+    height: 100vh;
 }
 
 .top {
@@ -72,7 +72,12 @@ body {
 }
 
 
-footer {
-    height: 50px;
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: pink;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
