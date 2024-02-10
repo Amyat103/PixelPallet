@@ -1,3 +1,9 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -19,5 +25,5 @@
 .blocks:hover {
     background-color: #0000FF;
     opacity: 1;
-    transition: opacity 0.08s ease;
+    transition: opacity 0.1s ease;
 }
