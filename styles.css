@@ -1,7 +1,14 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
 .top {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 1px;
 }
 
 .container {
@@ -28,20 +35,44 @@
 }
 
 .topBar {
+    background-color: pink;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex: 1 1 auto;
-}
-
-#logo {
-    width: 150px;
-    height: auto;
+    width: 100%;
     flex: 0 0 auto;
 }
 
+#logo {
+    width: 100px;
+    height: auto;
+}
+
+.logo,
+.links {
+    flex: 1;
+}
+
+.name {
+    flex: 2;;
+}
+
+.topBar > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-.title > * {
-    flex: 1 1 auto;
+.body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+footer {
+    height: 50px;
+    background-color: pink;
 }
