@@ -73,7 +73,7 @@ function makeGrid(gridSize) {
 const showIncorrectValue = function () {
     const errorMessage = document.createElement("H4");
     errorMessage.setAttribute("id", "errorMessage");
-    errorMessage.textContent = "Must Input Between 10 and 100! :)";
+    errorMessage.textContent = "Must Input Between 10 and 30! :)";
     errorDiv.appendChild(errorMessage);
 }
 

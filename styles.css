@@ -26,3 +26,22 @@
     opacity: 1;
     transition: opacity 0.1s ease;
 }
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+#logo {
+    width: 150px;
+    height: auto;
+    flex: 0 0 auto;
+}
+
+
+
+.title > * {
+    flex: 1 1 auto;
+}
