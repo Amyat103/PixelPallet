@@ -5,8 +5,19 @@
 // 
 // 
 // 
+
+
+const topDiv = document.querySelector(".top");
+
 // container div
 const containerDiv = document.querySelector(".container");
+
+// create error div to easily remove old message
+const errorDiv = document.createElement("div");
+errorDiv.className = "errorDiv";
+
+// add error div to top div
+topDiv.appendChild(errorDiv);
 
 
 // const innerContainer = document.querySelector(".innerDiv");
@@ -21,8 +32,17 @@ makeGrid(10);
 
 const clickSize = inputButton.addEventListener("click", (e) => {
     gridSize = inputBox.value;
-    containerDiv.innerHTML = "";
-    makeGrid(gridSize);
+    if (inputBox.value > 100 || inputBox.value < 10) {
+        if (errorDiv.contains(document.querySelector("#errorMessage"))) {
+            errorDiv.innerHTML = "";
+        }
+        console.log(2);
+        showIncorrectValue();
+    } else {
+        errorDiv.innerHTML = "";
+        containerDiv.innerHTML = "";
+        makeGrid(gridSize);
+    }
 })
 
 console.log(gridSize);
@@ -52,6 +72,11 @@ function makeGrid(gridSize) {
     containerDiv.append(innerContainer);
 }
 
-
+const showIncorrectValue = function () {
+    const errorMessage = document.createElement("H4");
+    errorMessage.setAttribute("id", "errorMessage");
+    errorMessage.textContent = "Must Input Between 10 and 100! :)";
+    errorDiv.appendChild(errorMessage);
+}
 
 
