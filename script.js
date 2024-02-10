@@ -30,7 +30,7 @@ makeGrid(10);
 
 const clickSize = inputButton.addEventListener("click", (e) => {
     gridSize = inputBox.value;
-    if (inputBox.value > 30 || inputBox.value < 5) {
+    if (inputBox.value > 20 || inputBox.value < 5) {
         if (errorDiv.contains(document.querySelector("#errorMessage"))) {
             errorDiv.innerHTML = "";
         }
@@ -73,7 +73,7 @@ function makeGrid(gridSize) {
 const showIncorrectValue = function () {
     const errorMessage = document.createElement("H4");
     errorMessage.setAttribute("id", "errorMessage");
-    errorMessage.textContent = "Must Input Between 10 and 30! :)";
+    errorMessage.textContent = "Must Input Between 10 and 20! :)";
     errorDiv.appendChild(errorMessage);
 }
 
