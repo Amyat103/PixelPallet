@@ -12,20 +12,26 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
 }
 
 .row {
     display: flex;
+    flex-grow: 1;
 }
 
 .blocks {
-    width: 20px;
-    height: 20px;
+    display: flex;
+    aspect-ratio: 1/1;
+    flex-grow: 1;
     background-color: red;
     opacity: 0.1;
-    transition: opacity 0.1s ease 0.3s;
+    transition: opacity 0.2s ease 0.2s;
 }
 
 .blocks:hover {
