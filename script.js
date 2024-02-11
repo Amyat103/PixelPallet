@@ -6,6 +6,7 @@
 
 
 const topDiv = document.querySelector(".top");
+const inputAreaDiv = document.querySelector(".inputArea");
 
 // container div
 const containerDiv = document.querySelector(".container");
@@ -15,7 +16,7 @@ const errorDiv = document.createElement("div");
 errorDiv.className = "errorDiv";
 
 // add error div to top div
-topDiv.appendChild(errorDiv);
+inputAreaDiv.appendChild(errorDiv);
 
 
 // const innerContainer = document.querySelector(".innerDiv");
@@ -30,7 +31,7 @@ makeGrid(10);
 
 const clickSize = inputButton.addEventListener("click", (e) => {
     gridSize = inputBox.value;
-    if (inputBox.value > 100 || inputBox.value < 5) {
+    if (inputBox.value > 100 || inputBox.value < 0) {
         if (errorDiv.contains(document.querySelector("#errorMessage"))) {
             errorDiv.innerHTML = "";
         }
@@ -73,7 +74,7 @@ function makeGrid(gridSize) {
 const showIncorrectValue = function () {
     const errorMessage = document.createElement("H4");
     errorMessage.setAttribute("id", "errorMessage");
-    errorMessage.textContent = "Must Input Between 10 and 100! :)";
+    errorMessage.textContent = "Must Input Between 1 and 100! :)";
     errorDiv.appendChild(errorMessage);
 }
 
